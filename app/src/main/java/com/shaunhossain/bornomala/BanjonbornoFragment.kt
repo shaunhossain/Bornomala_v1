@@ -11,9 +11,6 @@ import com.shaunhossain.bornomala.ViewModel.BanjonbornoViewModel
 
 class BanjonbornoFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = BanjonbornoFragment()
-    }
 
     private lateinit var viewModel: BanjonbornoViewModel
 

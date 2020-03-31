@@ -14,9 +14,6 @@ import kotlinx.android.synthetic.main.sorborno_fragment.*
 
 class SorbornoFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SorbornoFragment()
-    }
 
     private lateinit var viewModel: SorbornoViewModel
     private var customAdapter: CustomAdapter? = null

@@ -1,6 +1,6 @@
 package com.shaunhossain.bornomala.Model
 
-class Model {
+class ModelSorborno {
     var bornoImage: Int
     var relatedImage: Int
     var description: String = ""
