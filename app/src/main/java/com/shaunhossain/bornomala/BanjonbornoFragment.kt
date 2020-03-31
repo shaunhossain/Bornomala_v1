@@ -6,13 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import com.shaunhossain.bornomala.Adapter.BanjonbornoCustomAdapter
+import com.shaunhossain.bornomala.Adapter.SorbornoCustomAdapter
 import com.shaunhossain.bornomala.ViewModel.BanjonbornoViewModel
+import com.shaunhossain.bornomala.ViewModel.SorbornoViewModel
+import kotlinx.android.synthetic.main.banjonborno_fragment.*
+import kotlinx.android.synthetic.main.sorborno_fragment.*
 
 
 class BanjonbornoFragment : Fragment() {
 
 
     private lateinit var viewModel: BanjonbornoViewModel
+    private var banjonbornoCustomAdapter: BanjonbornoCustomAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,7 +31,10 @@ class BanjonbornoFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(BanjonbornoViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel.getArrayList().observe(viewLifecycleOwner, Observer { BanjonbornoViewModels ->
+            banjonbornoCustomAdapter = BanjonbornoCustomAdapter(BanjonbornoViewModels!!)
+            view_pager_banjonborno.adapter = banjonbornoCustomAdapter
+        })
     }
 
 }

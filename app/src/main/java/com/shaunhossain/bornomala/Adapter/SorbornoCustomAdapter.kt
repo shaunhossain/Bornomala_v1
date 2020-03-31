@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.shaunhossain.bornomala.R
 import com.shaunhossain.bornomala.ViewModel.SorbornoViewModel
 
-class CustomAdapter(private val model: ArrayList<SorbornoViewModel>): RecyclerView.Adapter<CustomAdapter.ViewPagerHolder>() {
+class SorbornoCustomAdapter(private val model: ArrayList<SorbornoViewModel>): RecyclerView.Adapter<SorbornoCustomAdapter.ViewPagerHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerHolder {
