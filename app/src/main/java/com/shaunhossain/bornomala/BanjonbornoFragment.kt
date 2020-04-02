@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import com.airbnb.lottie.LottieAnimationView
 import com.shaunhossain.bornomala.Adapter.BanjonbornoCustomAdapter
 import com.shaunhossain.bornomala.Adapter.SorbornoCustomAdapter
 import com.shaunhossain.bornomala.ViewModel.BanjonbornoViewModel
@@ -34,6 +35,21 @@ class BanjonbornoFragment : Fragment() {
         viewModel.getArrayList().observe(viewLifecycleOwner, Observer { BanjonbornoViewModels ->
             banjonbornoCustomAdapter = BanjonbornoCustomAdapter(BanjonbornoViewModels!!)
             view_pager_banjonborno.adapter = banjonbornoCustomAdapter
+            var next: LottieAnimationView = view!!.findViewById<LottieAnimationView>(R.id.next)
+            next.setOnClickListener(View.OnClickListener {
+                view_pager_sorborno.setCurrentItem(
+                    view_pager_sorborno.getCurrentItem() + 1,
+                    true
+                )
+            })
+
+            var previous: LottieAnimationView = view!!.findViewById<LottieAnimationView>(R.id.previous)
+            previous.setOnClickListener(View.OnClickListener {
+                view_pager_sorborno.setCurrentItem(
+                    view_pager_sorborno.getCurrentItem() - 1,
+                    true
+                )
+            })
         })
     }
 

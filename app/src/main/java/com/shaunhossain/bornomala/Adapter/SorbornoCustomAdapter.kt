@@ -45,17 +45,17 @@ class SorbornoCustomAdapter(private val modelSorborno: ArrayList<SorbornoViewMod
                 override fun onClick(view: View?) {
                     var soundPlay : MediaPlayer? = null
                     when(adapterPosition){
-                        0 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.one)
-                        1 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.two)
-                        2 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.three)
-                        3 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.four)
-                        4 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_5)
-                        5 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_6)
-                        6 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_7)
-                        7 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_8)
-                        8 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_9)
-                        9 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_10)
-                        10 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_11)
+                        0 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_1)
+                        1 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_2)
+                        2 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_3)
+                        3 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_4)
+                        4 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_5)
+                        5 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_6)
+                        6 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_7)
+                        7 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_8)
+                        8 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_9)
+                        9 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_10)
+                        10 -> soundPlay = MediaPlayer.create(view!!.context, R.raw.b_r_11)
 
                     }
                     soundPlay!!.start()
