@@ -1,12 +1,12 @@
 package com.shaunhossain.bornomala
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.shaunhossain.bornomala.Adapter.SorbornoCustomAdapter
 import com.shaunhossain.bornomala.ViewModel.SorbornoViewModel
 import kotlinx.android.synthetic.main.sorborno_fragment.*

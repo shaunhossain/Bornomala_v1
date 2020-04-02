@@ -1,6 +1,5 @@
 package com.shaunhossain.bornomala
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,10 +32,10 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when(view!!.id){
-            R.id.letter_view -> navController!!.navigate(R.id.action_mainFragment_to_alphabatSelectionFragment)
-            R.id.number_view -> navController!!.navigate(R.id.action_mainFragment_to_numberFragment)
-            R.id.quiz_view -> navController!!.navigate(R.id.action_mainFragment_to_gameFragment)
-            R.id.write_view -> navController!!.navigate(R.id.action_mainFragment_to_writeFragment)
+            R.id.letter_view -> navController.navigate(R.id.action_mainFragment_to_alphabatSelectionFragment)
+            R.id.number_view -> navController.navigate(R.id.action_mainFragment_to_numberFragment)
+            R.id.quiz_view -> navController.navigate(R.id.action_mainFragment_to_gameFragment)
+            R.id.write_view -> navController.navigate(R.id.action_mainFragment_to_writeFragment)
         }
 
     }

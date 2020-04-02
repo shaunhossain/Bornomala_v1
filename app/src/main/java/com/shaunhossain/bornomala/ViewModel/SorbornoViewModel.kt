@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 
 class SorbornoViewModel : ViewModel {
     var bornoImage: Int? = null
+    var bornoAudio: Int? = null
     var relatedImage: Int? = null
     var description: String = ""
 
@@ -14,6 +15,7 @@ class SorbornoViewModel : ViewModel {
 
     constructor(modelSorborno: ModelSorborno):super() {
         this.bornoImage = modelSorborno.bornoImage
+        this.bornoAudio = modelSorborno.bornoAudio
         this.relatedImage = modelSorborno.relatedImage
         this.description = modelSorborno.description
     }
@@ -24,74 +26,85 @@ class SorbornoViewModel : ViewModel {
 
         val modelOne = ModelSorborno(
             R.drawable.b_1,
+            R.raw.one,
             R.drawable.b_r_1,
             "অজগর")
         val modelTwo = ModelSorborno(
             R.drawable.b_2,
+            R.raw.two,
             R.drawable.b_r_2,
             "আম")
         val modelThree = ModelSorborno(
             R.drawable.b_3,
+            R.raw.two,
             R.drawable.b_r_3,
             "ইঁদুর")
         val modelFour = ModelSorborno(
             R.drawable.b_4,
+            R.raw.two,
             R.drawable.b_r_4,
             "ঈগল")
         val modelFive = ModelSorborno(
             R.drawable.b_5,
+            R.raw.two,
             R.drawable.b_r_5,
             "উট")
         val modelSix = ModelSorborno(
             R.drawable.b_6,
+            R.raw.two,
             R.drawable.b_r_6,
             "ঊষা")
         val modelSeven = ModelSorborno(
             R.drawable.b_7,
+            R.raw.two,
             R.drawable.b_r_7,
             "কৃষক")
         val modelEight = ModelSorborno(
             R.drawable.b_8,
+            R.raw.two,
             R.drawable.b_r_8,
             "একতারা")
         val modelNine = ModelSorborno(
             R.drawable.b_9,
+            R.raw.two,
             R.drawable.b_r_9,
             "ঐরাবত")
         val modelTen = ModelSorborno(
             R.drawable.b_10,
+            R.raw.two,
             R.drawable.b_r_10,
             "ওলকচু")
         val modelEleven = ModelSorborno(
             R.drawable.b_11,
+            R.raw.two,
             R.drawable.b_r_11,
             "ঔষধ")
 
-        val viewModelOne: SorbornoViewModel = SorbornoViewModel(modelOne)
-        val viewModelTwo: SorbornoViewModel = SorbornoViewModel(modelTwo)
-        val viewModelThree: SorbornoViewModel = SorbornoViewModel(modelThree)
-        val viewModelFour: SorbornoViewModel = SorbornoViewModel(modelFour)
-        val viewModelFive: SorbornoViewModel = SorbornoViewModel(modelFive)
-        val viewModelSix: SorbornoViewModel = SorbornoViewModel(modelSix)
-        val viewModelSeven: SorbornoViewModel = SorbornoViewModel(modelSeven)
-        val viewModelEight: SorbornoViewModel = SorbornoViewModel(modelEight)
-        val viewModelNine: SorbornoViewModel = SorbornoViewModel(modelNine)
-        val viewModelTen: SorbornoViewModel = SorbornoViewModel(modelTen)
-        val viewModelEleven: SorbornoViewModel = SorbornoViewModel(modelEleven)
+        val viewModelOne = SorbornoViewModel(modelOne)
+        val viewModelTwo = SorbornoViewModel(modelTwo)
+        val viewModelThree = SorbornoViewModel(modelThree)
+        val viewModelFour = SorbornoViewModel(modelFour)
+        val viewModelFive = SorbornoViewModel(modelFive)
+        val viewModelSix = SorbornoViewModel(modelSix)
+        val viewModelSeven = SorbornoViewModel(modelSeven)
+        val viewModelEight = SorbornoViewModel(modelEight)
+        val viewModelNine = SorbornoViewModel(modelNine)
+        val viewModelTen = SorbornoViewModel(modelTen)
+        val viewModelEleven = SorbornoViewModel(modelEleven)
 
 
 
-        SorbornoDataList!!.add(viewModelOne)
-        SorbornoDataList!!.add(viewModelTwo)
-        SorbornoDataList!!.add(viewModelThree)
-        SorbornoDataList!!.add(viewModelFour)
-        SorbornoDataList!!.add(viewModelFive)
-        SorbornoDataList!!.add(viewModelSix)
-        SorbornoDataList!!.add(viewModelSeven)
-        SorbornoDataList!!.add(viewModelEight)
-        SorbornoDataList!!.add(viewModelNine)
-        SorbornoDataList!!.add(viewModelTen)
-        SorbornoDataList!!.add(viewModelEleven)
+        SorbornoDataList.add(viewModelOne)
+        SorbornoDataList.add(viewModelTwo)
+        SorbornoDataList.add(viewModelThree)
+        SorbornoDataList.add(viewModelFour)
+        SorbornoDataList.add(viewModelFive)
+        SorbornoDataList.add(viewModelSix)
+        SorbornoDataList.add(viewModelSeven)
+        SorbornoDataList.add(viewModelEight)
+        SorbornoDataList.add(viewModelNine)
+        SorbornoDataList.add(viewModelTen)
+        SorbornoDataList.add(viewModelEleven)
 
         mutablelivedata.value = SorbornoDataList
 

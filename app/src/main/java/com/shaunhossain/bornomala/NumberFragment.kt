@@ -1,7 +1,6 @@
 package com.shaunhossain.bornomala
 
 import android.media.MediaPlayer
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -53,7 +52,7 @@ class NumberFragment : Fragment(), View.OnClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(NumberViewModel::class.java)
+        //viewModel = ViewModelProviders.of(this).get(NumberViewModel::class.java)
         soundOne = MediaPlayer.create(context, R.raw.one)
         soundTwo = MediaPlayer.create(context, R.raw.two)
         soundThree = MediaPlayer.create(context, R.raw.three)
@@ -69,16 +68,16 @@ class NumberFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View?) {
 
         when(view!!.id){
-            R.id.one_view -> soundOne?.start()
-            R.id.two_view -> soundTwo?.start()
-            R.id.three_view -> soundThree?.start()
-            R.id.four_view -> soundFour?.start()
-            R.id.five_view -> soundFive?.start()
-            R.id.six_view -> soundSix?.start()
-            R.id.seven_view -> soundSeven?.start()
-            R.id.eight_view -> soundEight?.start()
-            R.id.nine_view -> soundNine?.start()
-            R.id.zero_view -> soundZero?.start()
+            R.id.one_view -> soundOne.start()
+            R.id.two_view -> soundTwo.start()
+            R.id.three_view -> soundThree.start()
+            R.id.four_view -> soundFour.start()
+            R.id.five_view -> soundFive.start()
+            R.id.six_view -> soundSix.start()
+            R.id.seven_view -> soundSeven.start()
+            R.id.eight_view -> soundEight.start()
+            R.id.nine_view -> soundNine.start()
+            R.id.zero_view -> soundZero.start()
         }
     }
 
